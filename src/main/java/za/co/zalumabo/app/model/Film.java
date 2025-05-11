@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Size;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,12 +23,11 @@ public class Film {
     @Column(name = "title", nullable = false)
     private String title;
 
-    @Lob
     @Column(name = "description")
     private String description;
 
     @Column(name = "release_year")
-    private Integer releaseYear;
+    private Date releaseYear;
 
     @NotNull
     @ColumnDefault("3")
@@ -93,11 +93,11 @@ public class Film {
         this.description = description;
     }
 
-    public Integer getReleaseYear() {
+    public java.util.Date getReleaseYear() {
         return releaseYear;
     }
 
-    public void setReleaseYear(Integer releaseYear) {
+    public void setReleaseYear(Date releaseYear) {
         this.releaseYear = releaseYear;
     }
 
