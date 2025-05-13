@@ -53,6 +53,11 @@ You can then execute your native executable with: `./build/quarkus_gradle-1.0.0-
 
 If you want to learn more about building native executables, please consult <https://quarkus.io/guides/gradle-tooling>.
 
+## Pull a mysql database:
+
+```shell script
+docker run --platform linux/amd64 -d --publish 3306:3306 --name sakila restsql/mysql-sakila
+```
 ## Related Guides
 
 - JPAStreamer ([guide](https://quarkiverse.github.io/quarkiverse-docs/quarkus-jpastreamer/dev/)): Express your Hibernate queries as standard Java Streams
